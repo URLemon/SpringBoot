@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST" action="/admin/saveUser" th:object="${user}">
+    <input type="hidden" th:field="*{id}" th:value="*{getId()}">
+    name: <input type="text" th:field="*{name}">
+    login: <input type="text" th:field="*{login}">
+    password: <input type="text" th:field="*{password}">
+    <input type="submit" value="ok">
+</form>
+<input type="button" value="logout" onclick="window.location.href = 'login?logout';">
+</body>
+</html>

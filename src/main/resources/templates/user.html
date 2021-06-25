@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    NAME: <p th:text="${user.getName()}"></p>
+    LOGIN: <p th:text="${user.getUsername()}"></p>
+    PASSWORD: <p th:text="${user.getPassword()}"></p>
+    <input type="button" value="logout" onclick="window.location.href = 'login?logout';">
+
+</body>
+</html>
